@@ -6,6 +6,8 @@ class Personaje {
     this.armaP = [];
     this.armaR = [];
     this.enemigo = [];
+
+
   }
 
   mostrarTiostan() {
@@ -103,19 +105,32 @@ class Personaje {
       case "s":
         this.y += 25;
         break;
-      case "X":
-        this.disparar();
+      
+    }
+  }
+
+  dispararGeneral(){
+      switch(key){
+    case "X":
+        if(pantalla === 6 && 7 ){
+        this.disparar();}
         break;
       case "x":
+        if(pantalla === 6 && 7 ){
         this.disparar();
+        }
         break;
       case "Z":
+        if(pantalla === 6 && 7 ){
         this.dispararRayos();
+        }
         break;
       case "z":
+        if(pantalla === 6 && 7 ){
         this.dispararRayos();
+        }
         break;
-    }
+      }
   }
 
   traerEnemigo() {
@@ -131,4 +146,5 @@ class Personaje {
       }
     }
   }
+
 }

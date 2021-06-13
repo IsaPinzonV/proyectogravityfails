@@ -6,7 +6,9 @@ class Enemigo {
     this.vel = 10;
     this.randomX = 0;
     this.randomDir = 0;
+    this.activo = true;
   }
+
   mover() {
     if (this.dir == 0) {
       //abajo
@@ -69,5 +71,11 @@ class Enemigo {
 estaMuerto(){
     return this.muerto
 }
+
+estaActivo(){
+  return this.activo
+}
+
+
 
 }

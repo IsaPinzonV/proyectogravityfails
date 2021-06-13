@@ -128,7 +128,8 @@ function draw() {
         150,
         27
       );
-
+      //alfombra y texto
+      image(alfombra, x, y);
       //Pintar los personajes dependiendo la elección
 
       //Tio Stan
@@ -154,9 +155,6 @@ function draw() {
       for (let i = 0; i < vida.length; i++) {
         vida[i].mostrar();
       }
-
-      //alfombra y texto
-      image(alfombra, x, y);
 
       if (x < 287) {
         fill(255);
@@ -314,7 +312,7 @@ function mousePressed() {
         mouseY < 224 + 205
       ) {
         tioStann = true;
-        personaje.disparar();
+        
         console.log("disparo");
       }
 
@@ -326,7 +324,7 @@ function mousePressed() {
         mouseY < 224 + 205
       ) {
         mabell = true;
-        personaje.disparar();
+       
         console.log("disparo");
       }
 
@@ -338,7 +336,7 @@ function mousePressed() {
         mouseY < 224 + 205
       ) {
         dipperr = true;
-        personaje.disparar();
+       
 
         console.log("disparo");
       }
@@ -378,6 +376,7 @@ function mousePressed() {
 
 function keyPressed() {
   personaje.mover();
-
-  console.log(personaje.mover);
+  personaje.dispararGeneral();
 }
+
+console.log(personaje.mover);
